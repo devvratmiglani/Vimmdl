@@ -3,7 +3,7 @@
 
 `vm-cli` allows to search and download roms published by [Vimm's Lair](https://vimm.net/) through command line interface.
 
-![Demo usage of vm-cli][demo-gif]
+![Demo usage of vm-cli][demo-gif] (Coming soon)
 
 
 ## Installation
