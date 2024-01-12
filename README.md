@@ -1,7 +1,7 @@
 # Vimm's Lair CLI
-> CLI tool to search and download roms from [Vimm's Lair][https://vimm.net/].
+> CLI tool to search and download roms from [Vimm's Lair](https://vimm.net/).
 
-`vm-cli` allows to search and download roms published by [Killers Roms][https://vimm.net/] through command line interface.
+`vm-cli` allows to search and download roms published by [Killers Roms](https://vimm.net/) through command line interface.
 
 ![Demo usage of vm-cli][demo-gif]
 
@@ -9,7 +9,7 @@
 ## Installation
 
 ### `Aria2` Dependency
-_**Requires [Aria2c][https://github.com/aria2/aria2/releases/tag/release-1.37.0] downloader installed and set in Environment variables**_ 
+_**Requires [Aria2c](https://github.com/aria2/aria2/releases/tag/release-1.37.0) downloader installed and set in Environment variables**_ 
 (or paste the execuatble in path which is already an environment variable)
 
 
