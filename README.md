@@ -1,5 +1,5 @@
 # Vimm's Lair CLI
-> CLI tool to search and download roms from [Vimm's Lair](https://vimm.net/).
+> Command line tool to search and download roms from [Vimm's Lair](https://vimm.net/).
 
 `vm-cli` allows to search and download roms published by [Vimm's Lair](https://vimm.net/) through command line interface.
 
