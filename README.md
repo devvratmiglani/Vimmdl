@@ -54,5 +54,5 @@ vm download https://vimm.net/vault/9663
 ```
 for simultaneous downloads
 ```sh
-vm download https://vimm.net/vault/70794  https://vimm.net/vault/9663 https://vimm.net/vault/68873
+vm download https://vimm.net/vault/70794 https://vimm.net/vault/9663 https://vimm.net/vault/68873
 ```
