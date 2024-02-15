@@ -18,7 +18,7 @@ _**Requires [Aria2c](https://github.com/aria2/aria2/releases/tag/release-1.37.0)
 git clone https://github.com/devvratmiglani/Vimmdl.git
 
 ## go to main directory (which contains setup.py)
-cd .\Vimmdl
+cd Vimmdl
 
 ## install as
 pip install .
