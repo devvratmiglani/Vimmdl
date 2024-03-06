@@ -13,7 +13,11 @@ _**Requires [Aria2c](https://github.com/aria2/aria2/releases/tag/release-1.37.0)
 (or paste the execuatble in path which is already an environment variable)
 
 #Shhhhh🤫! install scoop then
+
+```sh 
 scoop install aria2
+```
+### Installing the package
 
 ```sh
 ## clone the repository
