@@ -1,4 +1,5 @@
 import requests
+from colorama import Fore  
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
@@ -40,7 +41,7 @@ def search(console,q):
                 link = ''
         
             list_of_dict.append({'System':system,'Title':Title,'Region':region,'Version':version,'Link':link})
-        print(tabulate(list_of_dict,headers="keys"))
+        print(string_forer(tabulate(list_of_dict,headers="keys")))
 
     elif console != '':
         list_of_dict = []
@@ -80,4 +81,17 @@ def search(console,q):
                 ratings = '-'
         
             list_of_dict.append({'Title':Title,'Region':region,'Version':version,'Languages':langs,'Rating':ratings,'Link':link})
-        print(tabulate(list_of_dict,headers="keys"))
+        print(string_forer(tabulate(list_of_dict,headers="keys")))
+
+
+def string_forer(table_string:str):
+    lines = table_string.split('\n')
+    table_string = ""
+    table_string += Fore.RED + lines[0] +'\n'
+    table_string += Fore.WHITE + lines[1] + '\n'
+    for i,line in enumerate(lines[2:]):
+        if i%2 == 0:
+            table_string += Fore.GREEN + line + '\n'
+        if i%2 != 0:
+            table_string += Fore.WHITE + line + '\n'
+    return table_string
