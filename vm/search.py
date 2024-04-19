@@ -1,5 +1,5 @@
 import requests
-from colorama import Fore  
+from colorama import Fore, Style
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
@@ -87,11 +87,11 @@ def search(console,q):
 def string_forer(table_string:str):
     lines = table_string.split('\n')
     table_string = ""
-    table_string += Fore.RED + lines[0] +'\n'
-    table_string += Fore.WHITE + lines[1] + '\n'
+    table_string += Style.BRIGHT+Fore.RED + lines[0] +'\n'
+    table_string += Style.BRIGHT+Fore.WHITE + lines[1] + '\n'
     for i,line in enumerate(lines[2:]):
         if i%2 == 0:
-            table_string += Fore.GREEN + line + '\n'
+            table_string += Style.BRIGHT+Fore.GREEN + line + '\n'
         if i%2 != 0:
-            table_string += Fore.WHITE + line + '\n'
+            table_string += Style.BRIGHT+Fore.WHITE + line + '\n'
     return table_string
