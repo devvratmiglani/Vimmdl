@@ -40,7 +40,7 @@ def retrieve_download_urls(urls):
             dl_form = soup.find('form',{'id':'download_form'})
             dl_urls.append("https:" + dl_form['action'] + "?mediaId="+dl_form.input['value'])
         except:
-            print("Skipping Url! - Cannot retrieve doenload information.")
+            print("Skipping Url! - Cannot retrieve download information.")
             continue
     return dl_urls
 
