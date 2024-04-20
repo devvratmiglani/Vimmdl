@@ -30,6 +30,11 @@ cd Vimmdl
 pip install .
 
 ```
+For linux distributions you can also try pipx to counter the error message `error: externally-managed-environment`
+```
+pipx install .
+```
+[installing pipx?, documentation is here](https://github.com/pypa/pipx)
 
 ## Usage example
 
