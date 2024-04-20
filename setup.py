@@ -17,8 +17,10 @@ setup(
     install_requires=[
         "Click",
         "beautifulsoup4",
+        "bs4",
         "requests",
         "tabulate",
+        "colorama"
     ],
     entry_points="""
         [console_scripts]
