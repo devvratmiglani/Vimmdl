@@ -34,7 +34,8 @@ For linux distributions you can also try pipx to counter the error message `erro
 ```
 pipx install .
 ```
-[installing pipx?, documentation is here](https://github.com/pypa/pipx)
+installing pipx?
+[Documentation is here](https://github.com/pypa/pipx)
 
 ## Usage example
 
