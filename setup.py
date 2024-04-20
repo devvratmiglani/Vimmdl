@@ -15,7 +15,7 @@ setup(
     ],
     packages=["vm"],
     install_requires=[
-        "Click",
+        "click",
         "beautifulsoup4",
         "bs4",
         "requests",
