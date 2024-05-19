@@ -29,7 +29,7 @@ pipx install git+https://github.com/devvratmiglani/Vimmdl.git
 Installing pipx?
 [Documentation is here](https://github.com/pypa/pipx)
 
-## Usage example
+## Usage
 
 ### `consoles` command
 
