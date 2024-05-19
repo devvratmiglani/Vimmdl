@@ -21,12 +21,10 @@ scoop install aria2
 
 ```sh
 pip install git+https://github.com/devvratmiglani/Vimmdl.git
-
 ```
 For linux distributions you can also try pipx to counter the error message `error: externally-managed-environment`
 ```
 pipx install git+https://github.com/devvratmiglani/Vimmdl.git
-
 ```
 installing pipx?
 [Documentation is here](https://github.com/pypa/pipx)
