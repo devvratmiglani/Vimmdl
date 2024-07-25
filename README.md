@@ -17,6 +17,10 @@ _**Requires [Aria2c](https://github.com/aria2/aria2/releases/tag/release-1.37.0)
 ```sh 
 scoop install aria2
 ```
+For Ubuntu
+```sh 
+sudo apt-get install aria2
+```
 ### Installing the package
 
 ```sh
