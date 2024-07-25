@@ -2,6 +2,7 @@ import re
 import subprocess
 import requests
 import click
+from colorama import Fore, Style
 from bs4 import BeautifulSoup
 
 def aria_download(dl_urls):
@@ -31,13 +32,16 @@ def retrieve_download_urls(urls):
     dl_urls = []
     for url in urls:
         try:
-            r = requests.get(url)
+            r = requests.get(url,headers={"User-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"})
         except:
             print("Skipping Url! - Cannot retrieve webpage.")
             continue
         soup = BeautifulSoup(r.text,"html.parser")
         try:
-            dl_form = soup.find('form',{'id':'download_form'})
+            dl_form = soup.find('form',{'id':'dl_form'})
+            if dl_form.parent.div != None:
+                print(Style.BRIGHT+Fore.RED+"Some Downloads Maybe Not Available!"+Style.BRIGHT+Fore.WHITE)
+                print(Style.BRIGHT+Fore.YELLOW+"Reason: "+Style.BRIGHT+Fore.WHITE+dl_form.parent.text)
             dl_urls.append("https:" + dl_form['action'] + "?mediaId="+dl_form.input['value'])
         except:
             print("Skipping Url! - Cannot retrieve download information.")
@@ -45,19 +49,21 @@ def retrieve_download_urls(urls):
     return dl_urls
 
 def start_download(dl_urls):
+    if len(dl_urls) == 0:
+        raise ValueError(Style.BRIGHT+Fore.RED+"Download List is Empty")
     command = ["aria2c", "--version"]
     try:
         # Try to execute the command and capture the return code
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         if result.returncode == 0:
-            print("aria2c requirement is satisfied")
+            print(Style.BRIGHT+Fore.GREEN+"Aria2c "+Style.BRIGHT+Fore.WHITE+"requirement is satisfied")
             aria_download(dl_urls)
         else:
-            print("aria2c is not installed")
+            print(Style.BRIGHT+Fore.RED+"Aria2c"+Style.BRIGHT+Fore.WHITE+" is not installed")
             default_download(dl_urls)
     except subprocess.CalledProcessError:
-        print("aria2c is not installed")
+        print(Style.BRIGHT+Fore.RED+"Aria2c"+Style.BRIGHT+Fore.WHITE+" is not installed")
         default_download(dl_urls)
     except FileNotFoundError:
-        print("aria2c is not installed")
+        print(Style.BRIGHT+Fore.RED+"Aria2c"+Style.BRIGHT+Fore.WHITE+" is not installed")
         default_download(dl_urls)
