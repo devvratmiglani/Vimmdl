@@ -64,3 +64,11 @@ for simultaneous downloads
 ```sh
 vm download https://vimm.net/vault/70794 https://vimm.net/vault/9663 https://vimm.net/vault/68873
 ```
+## Unstallation
+```sh
+pip uninstall vm-cli
+```
+or pipx
+```sh
+pipx uninstall vm-cli
+```
