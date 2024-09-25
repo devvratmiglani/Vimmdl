@@ -8,6 +8,24 @@
 
 ## Installation
 
+### Docker Build
+Make this Dockerfile in you folder of choice
+```dockerfile
+# Use Python 3.9 Alpine as base image
+FROM python:3.9.20-alpine3.20
+WORKDIR /vimmdl
+COPY . .
+RUN pip install aria2
+RUN pip install ./vimmdl
+VOLUME ["/downloads"]
+CMD ["sh", "-c", "vm consoles && sh"]
+```
+
+```sh
+docker build -t vimmdl .
+docker run -it -v /absolutepath/to/downloads:/downloads vimmdl
+```
+
 ### `Aria2` Dependency
 _**Requires [Aria2c](https://github.com/aria2/aria2/releases/tag/release-1.37.0) downloader installed and set in Environment variables**_ 
 (or paste the execuatble in path which is already an environment variable)
