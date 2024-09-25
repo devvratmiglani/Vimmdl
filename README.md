@@ -22,7 +22,7 @@ CMD ["sh", "-c", "vm consoles && sh"]
 ```
 
 ```sh
-git clone --branch Docker https://github.com/devvratmiglani/Vimmdl.git
+git clone --branch Docker https://github.com/devvratmiglani/vimmdl.git
 docker build -t vimmdl .
 docker run -it -v /absolutepath/to/downloads:/downloads vimmdl
 ```
