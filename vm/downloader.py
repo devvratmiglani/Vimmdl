@@ -10,7 +10,7 @@ def aria_download(dl_urls):
             click.echo("\nDownload Starting:")
     for x in dl_urls:
         click.echo(x.split('/')[-1])
-        arg = ["aria2c","--dir",".","-j1","-Z",'--referer="https://vimm.net/vault/"',"-U","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"]
+        arg = ["aria2c","--dir","/downloads","-j1","-Z",'--referer="https://vimm.net/vault/"',"-U","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"]
         arg.extend(dl_urls)
     subprocess.run(arg)
     # add user agent and referer and your download will work like a charm
