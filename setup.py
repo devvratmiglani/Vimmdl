@@ -20,7 +20,9 @@ setup(
         "bs4",
         "requests",
         "tabulate",
-        "colorama"
+        "colorama",
+        "certifi",
+        "truststore"
     ],
     entry_points="""
         [console_scripts]

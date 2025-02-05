@@ -4,6 +4,26 @@ import requests
 import click
 from colorama import Fore, Style
 from bs4 import BeautifulSoup
+import certifi
+import truststore
+
+truststore.inject_into_ssl()
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:123.0) Gecko/20100101 Firefox/123.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br",
+    "DNT": "1",
+    "Connection": "keep-alive",
+    "Referer": "https://vimm.net/vault/?p=list&system=PS2&q=gta",
+    "Cookie": "counted=1",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-User": "?1"
+}
 
 def aria_download(dl_urls):
     if len(dl_urls) != 0:
@@ -32,7 +52,7 @@ def retrieve_download_urls(urls):
     dl_urls = []
     for url in urls:
         try:
-            r = requests.get(url,headers={"User-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"})
+            r = requests.get(url,headers=headers,verify=certifi.where())
         except:
             print("Skipping Url! - Cannot retrieve webpage.")
             continue
