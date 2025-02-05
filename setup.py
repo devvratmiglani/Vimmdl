@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="vm-cli",
-    version="2.0",
+    version="2.2",
     description="CLI tool to search and download roms from vimm's lair",
     url="https://github.com/devvratmiglani",
     author="Devvrat Miglani",
