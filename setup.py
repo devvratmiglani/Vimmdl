@@ -1,3 +1,4 @@
+import setuptools
 from setuptools import setup
 
 setup(
@@ -15,14 +16,15 @@ setup(
     ],
     packages=["vm"],
     install_requires=[
-        "click",
-        "beautifulsoup4",
-        "bs4",
-        "requests",
-        "tabulate",
-        "colorama",
-        "certifi",
-        "truststore"
+        "click>=8.0.4",
+        "beautifulsoup4>=4.12.2",
+        "bs4>=0.0.1",
+        "requests>=2.31.0",
+        "tabulate>=0.8.10",
+        "colorama>=0.4.6",
+        "certifi>=2023.7.22",
+        "truststore>=0.10.0",
+        "setuptools>=64.0.0,<=69.0.2"
     ],
     entry_points="""
         [console_scripts]
