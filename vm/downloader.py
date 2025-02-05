@@ -6,6 +6,11 @@ from colorama import Fore, Style
 from bs4 import BeautifulSoup
 import certifi
 import truststore
+import os
+
+verification = certifi.where()
+if os.name != "nt":
+    verification = False
 
 truststore.inject_into_ssl()
 

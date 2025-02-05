@@ -21,6 +21,9 @@ For Ubuntu
 ```sh 
 sudo apt-get install aria2
 ```
+*NOTE: SSL is not supported for linux as of now*
+This site may also not load on some browsers with limited certificates
+
 ### Installing the package
 
 ```sh
