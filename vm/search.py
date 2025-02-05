@@ -31,7 +31,7 @@ headers = {
 }
 
 def search(console,q):
-    r = requests.get(f"https://vimm.net/vault/?p=list&system={console}&q={q}",headers=headers,verify=certifi.where())
+    r = requests.get(f"https://vimm.net/vault/?p=list&system={console}&q={q}",headers=headers,verify=verification)
 
     soup = BeautifulSoup(r.text,"html.parser")
     if console == '':

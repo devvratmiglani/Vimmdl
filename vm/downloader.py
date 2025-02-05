@@ -57,7 +57,7 @@ def retrieve_download_urls(urls):
     dl_urls = []
     for url in urls:
         try:
-            r = requests.get(url,headers=headers,verify=certifi.where())
+            r = requests.get(url,headers=headers,verify=verification)
         except:
             print("Skipping Url! - Cannot retrieve webpage.")
             continue
