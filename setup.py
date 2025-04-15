@@ -23,7 +23,7 @@ setup(
         "tabulate>=0.8.10",
         "colorama>=0.4.6",
         "certifi>=2023.7.22",
-        "truststore>=0.10.0",
+        # "truststore",
         "setuptools>=64.0.0,<=69.0.2"
     ],
     entry_points="""

@@ -5,14 +5,14 @@ import click
 from colorama import Fore, Style
 from bs4 import BeautifulSoup
 import certifi
-import truststore
+# import truststore
 import os
 
 verification = certifi.where()
 if os.name != "nt":
     verification = False
 
-truststore.inject_into_ssl()
+# truststore.inject_into_ssl()
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:123.0) Gecko/20100101 Firefox/123.0",
