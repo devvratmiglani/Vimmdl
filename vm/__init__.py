@@ -10,7 +10,7 @@ def cli():
 
 @cli.command("consoles")
 def consoles():
-    print(tabulate(console_list.consolex,headers='keys'))
+    print(search.string_forer(tabulate(console_list.consolex,headers='keys')))
 
 def get_console(ctx, param, value):
     try:
